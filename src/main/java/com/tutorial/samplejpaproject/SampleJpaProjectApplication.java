@@ -1,7 +1,5 @@
 package com.tutorial.samplejpaproject;
 
-import com.tutorial.samplejpaproject.service.StudentServiceImpl;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

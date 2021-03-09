@@ -39,11 +39,23 @@ public class Student {
     @Setter
     @Column(name = "age", nullable = false)
     private int age;
+    
+    @Getter
+    @Setter
+    @Column(name = "date_created", nullable = false, columnDefinition = "DATE")
+    private String dateCreated;
+    
+    @Getter
+    @Setter
+    @Column(name = "date_updated", nullable = false, columnDefinition = "DATE")
+    private String dateUpdated;
 
-    public Student(String firstname, String lastname, String email, int age) {
+    public Student(String firstname, String lastname, String email, int age, String dateCreated, String dateUpdated) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.age = age;
+        this.dateCreated = dateCreated;
+        this.dateUpdated = dateUpdated;
     }
 }
