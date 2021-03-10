@@ -1,7 +1,8 @@
-package com.tutorial.samplejpaproject.service;
+package com.tutorial.samplejpaproject.service.impl;
 
 import com.tutorial.samplejpaproject.entities.Student;
 import com.tutorial.samplejpaproject.repository.StudentRepository;
+import com.tutorial.samplejpaproject.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,7 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findAll();
     }
 
+    //TODO: implement
     @Override
     public Student findStudentByEmail(String email) {
         return studentRepository.findStudentByEmail(email);

@@ -1,7 +1,7 @@
 package com.tutorial.samplejpaproject.controller;
 
 import com.tutorial.samplejpaproject.entities.Student;
-import com.tutorial.samplejpaproject.service.StudentServiceImpl;
+import com.tutorial.samplejpaproject.service.impl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
