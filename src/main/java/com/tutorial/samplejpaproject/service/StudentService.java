@@ -8,6 +8,8 @@ public interface StudentService {
 
     public void addStudent(Student student);
 
+    public void addStudents(List<Student> students);
+
     public List<Student> getStudents();
 
     public Student findStudentByEmail(String email);

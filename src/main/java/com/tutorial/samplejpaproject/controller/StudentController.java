@@ -23,6 +23,11 @@ public class StudentController {
         studentServiceImpl.addStudent(student);
     }
 
+    @RequestMapping (path = "/addStudents", method = RequestMethod.POST)
+    public void addStudent(@RequestBody List<Student> students){
+        studentServiceImpl.addStudents(students);
+    }
+
     @RequestMapping (path = "/getStudents", method = RequestMethod.GET)
     public List<Student> getStudents(){
         return studentServiceImpl.getStudents();

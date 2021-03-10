@@ -24,11 +24,15 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public void addStudents(List<Student> students) {
+        studentRepository.saveAll(students);
+    }
+
+    @Override
     public List<Student> getStudents() {
         return studentRepository.findAll();
     }
 
-    //TODO: implement
     @Override
     public Student findStudentByEmail(String email) {
         return studentRepository.findStudentByEmail(email);
