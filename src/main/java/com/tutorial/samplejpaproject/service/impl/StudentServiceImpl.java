@@ -22,8 +22,17 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void addStudent(Student student) {
         Student dbStudent = studentRepository.findStudentByEmail(student.getEmail());
-        if(null != dbStudent && !dbStudent.getEmail().equals(student.getEmail())){
+        if(null == dbStudent){
+            // Save new student
             studentRepository.save(student);
+        } else {
+            // Update student
+            dbStudent.setFirstname(student.getFirstname())
+                    .setLastname(student.getLastname())
+                    .setEmail(student.getEmail())
+                    .setAge(student.getAge())
+                    .setDateCreated(student.getDateCreated())
+                    .setDateUpdated(student.getDateUpdated());
         }
     }
 

@@ -1,10 +1,12 @@
 package com.tutorial.samplejpaproject.entities;
 
 import lombok.*;
+import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 
 @Data
+@Accessors(chain = true)
 @NoArgsConstructor
 @Entity
 @Table (name = "student")
